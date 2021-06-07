@@ -20,4 +20,12 @@
 
 .SignIn__h1 {
   justify-self: flex-start;
+  color: black;
+  margin-bottom: 240px;
+}
+
+.SignIn__link {
+  display: flex;
+  color: #0a86ad;
+  float: left;
 }
