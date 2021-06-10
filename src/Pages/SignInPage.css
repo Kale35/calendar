@@ -9,7 +9,7 @@
   background-color: #e2e2e2;
   color: whitesmoke;
   width: 50%;
-  height: 50%;
+  height: 70%;
   border-radius: 20px;
   padding: 20px;
   display: flex;
@@ -25,29 +25,49 @@
   height: 50%;
   justify-content: center;
   align-items: center;
-  margin: 20px ;
 }
 
 .SignIn__h1 {
-<<<<<<< HEAD:src/Pages/SignIn.css
   justify-self: flex-start;
   color: black;
-  margin-bottom: 240px;
+}
+
+.SignIn__content {
+  display: flex;
+  flex-flow: column;
+  padding-top: 0px;
+  width: 300px;
+  height: 400px;
+  justify-content: space-evenly;
+}
+
+.SignIn__textfield {
+  display: flex;
+  float: left;
+  width: 500px;
+  margin-top: 30px;
 }
 
 .SignIn__link {
-  display: flex;
   color: #0a86ad;
   float: left;
-=======
-  flex: 0.5;
-  color: #333;
-  justify-self: first baseline;
->>>>>>> 16b01283c84e541afa3df0ce95aabb35bc7fd2eb:src/Pages/SignInPage.css
 }
 
+.SignIn__submit {
+  background-color: #11aee0;
+  border-radius: 100px;
+  width: 200px;
+  height: 50px;
+  align-self: center;
+  margin-top: 5%;
+}
 
-.SignIn__link {
-  color: #0A86AD;
-  margin-top: 5px;
+.SignIn__submit > Button {
+  color: whitesmoke;
+  border-radius: 100px;
+  width: 200px;
+  height: 50px;
+  text-transform: capitalize;
+  font-size: x-large;
+  font-family: Arial, Helvetica, sans-serif;
 }
