@@ -1,0 +1,12 @@
+.calendar__box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eaeaea;
+  color: #333;
+  flex-grow: 1;
+  border: 1px solid #333;
+  height: calc(100% * (1/6));
+  width: calc(100% * (1/7) - 10px - 1px);
+  cursor: pointer;
+}

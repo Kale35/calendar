@@ -7,16 +7,20 @@ import {
 } from "react-router-dom";
 import SignInPage from "./Pages/SignInPage";
 import SignUpPage from "./Pages/SignUpPage";
+import CalendarPage from './Pages/CalendarPage';
 function App() {
   return (
     <Router>
       <Switch>
         <Route path="/" exact >
+          <CalendarPage />
+        </Route>
+        <Route path="/signup">
+          <SignUpPage />
+        </Route>
+        <Route path="/signin">
           <SignInPage />
-      </Route>
-      <Route path="/signup">
-        <SignUpPage/>
-      </Route>
+        </Route>
       </Switch>
     </Router>
   );
