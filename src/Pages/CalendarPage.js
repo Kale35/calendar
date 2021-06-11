@@ -32,11 +32,18 @@ export default function CalendarPage() {
 				d.setDate(-count + i + 1)
 				let newItem = {
 					date: d,
-					tasks: [{
-						title: `Do something ${-count + i + 1}`,
-						color: '#333',
-						backgroundColor: "#eaeaea",
-					}]
+					color: "#333",
+					backgroundColor: "#eaeaea",
+					tasks: [
+						// {
+						// 	title: `• Do something ${-count + i + 1}`,
+						// 	color: '#333',
+						// },
+						// {
+						// 	title: `• Do something ${i}`,
+						// 	color: '#333',
+						// },
+					]
 				}
 				nCalendar.push(newItem);
 				maxItems--;
@@ -48,13 +55,25 @@ export default function CalendarPage() {
 			const d = new Date();
 			d.setMonth(currentMonth)
 			d.setDate(i);
+
 			let newItem = {
 				date: d,
-				tasks: [{
-					title: `Do something ${i}`,
-					color: '#333',
-					backgroundColor: "#eaeaea",
-				}]
+				color: "#333",
+				backgroundColor: "#eaeaea",
+				tasks: [
+					{
+						title: `• Do something ${i}`,
+						color: '#333',
+					},
+					{
+						title: `• Do something ${i}`,
+						color: '#333',
+					},
+				]
+			}
+			if (d.getDate() === _DATE.getDate() && d.getMonth() === _DATE.getMonth() && d.getFullYear() === _DATE.getFullYear()) {
+				newItem.backgroundColor = "whitesmoke";
+				// current day
 			}
 			nCalendar.push(newItem)
 		}

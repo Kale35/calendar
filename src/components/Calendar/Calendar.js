@@ -30,14 +30,23 @@ export default function Calendar(props) {
 			day = "X"
 	}
 	return (
-		<div className="calendar__box">
-			{day}<br />
-			Date: {data.date.getDate()}.
-			{`${data.date.getMonth() + 1}`.length == 1 ? `0${data.date.getMonth() + 1}` : data.date.getMonth() + 1}.
-			{data.date.getFullYear()}
-
-			<br />
-			{data?.tasks[0].title}
+		// <div className="calendar__box" style={{ color: data.color, backgroundColor: data.backgroundColor }}>
+		<div className="calendar__box" >
+			<div className="calendar__box-day">
+				<span>{day}</span>
+				<span>
+					{`${data.date.getDate()}`.length == 1 ? `0${data.date.getDate()}` : data.date.getDate()}.
+					{`${data.date.getMonth() + 1}`.length == 1 ? `0${data.date.getMonth() + 1}` : data.date.getMonth() + 1}.
+					{data.date.getFullYear()}
+				</span>
+			</div>
+			<div>
+				<br />
+				{data?.tasks.map((e, i) => (
+					// <div key={i} style={{ color: e.color, fontSize: "0.7rem", textAlign: "left" }}> {e.title} </div>
+					<div key={i} style={{ fontSize: "0.7em" }}> {e.title} </div>
+				))}
+			</div>
 		</div>
 	)
 }
