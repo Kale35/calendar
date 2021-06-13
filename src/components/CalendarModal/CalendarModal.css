@@ -1,0 +1,61 @@
+.calendarModal {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 100;
+  background-color: rgba(51, 51, 51, 0.479);
+}
+
+.calendarModal__content {
+  z-index: 200;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  background-color: #eaeaea;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  color: #333;
+  border-radius: 18px;
+  padding: 30px;
+  box-shadow: 2px 2px 5px #333;
+}
+
+.calendarModal__header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+.calendarModal__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.calendarModal__form .MuiInputBase-root {
+  width: 300px;
+}
+
+.calendarModal__inputDiv {
+  margin: 10px 0px;
+}
+
+.calendarModal__buttonDiv {
+  margin: 10px 0px;
+}
+
+.calendarModal__button {
+  align-self: flex-end;
+  justify-self: flex-end;
+  width: 300px;
+  height: 50px;
+  background-color: rgb(0, 110, 255);
+}
+
+/* 18px */
+/* 1.1REM = 18 * 1.1 = 19,8px */

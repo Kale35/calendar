@@ -1,5 +1,6 @@
 import React from 'react'
 import './Calendar.css'
+import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
 
 export default function Calendar(props) {
 	const { data } = props
@@ -31,7 +32,7 @@ export default function Calendar(props) {
 	}
 	return (
 		// <div className="calendar__box" style={{ color: data.color, backgroundColor: data.backgroundColor }}>
-		<div className="calendar__box" >
+		<div  >
 			<div className="calendar__box-day">
 				<span>{day}</span>
 				<span>
@@ -44,7 +45,7 @@ export default function Calendar(props) {
 				<br />
 				{data?.tasks.map((e, i) => (
 					// <div key={i} style={{ color: e.color, fontSize: "0.7rem", textAlign: "left" }}> {e.title} </div>
-					<div key={i} style={{ fontSize: "0.7em" }}> {e.title} </div>
+					<div key={i} style={{ fontSize: "0.84em", display: 'flex', alignItems: "center" }}><span style={{ color: e.color, fontSize: "1rem" }}><FiberManualRecordIcon /></span> {e.title} </div>
 				))}
 			</div>
 		</div>

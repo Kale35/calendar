@@ -4,8 +4,8 @@
   flex-grow: 1;
   padding: 3px;
   border: 1px solid #333;
-  height: calc(100% * (1/6));
-  width: calc(100% * (1/7) - 10px - 1px);
+  height: calc(100% * (1 / 6));
+  width: calc(100% * (1 / 7) - 10px - 1px);
   cursor: pointer;
   transition: 0.18s all;
 }
@@ -15,7 +15,7 @@
 }
 .calendar__box-day {
   text-align: left;
-  font-size: 0.7rem;
+  font-size: 1rem;
   display: flex;
   flex-flow: row;
   justify-content: space-between;
