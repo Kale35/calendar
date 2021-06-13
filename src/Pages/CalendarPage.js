@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Calendar from '../components/Calendar/Calendar';
-import "./CalendarPage.css"
+import "./CSS/CalendarPage.css"
 import IconButton from '@material-ui/core/IconButton';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
