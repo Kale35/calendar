@@ -13,7 +13,7 @@ export default function SignInPage() {
 					<TextField variant="outlined" label="Password"></TextField>
 			
 					<Link className="SignIn__link" to="#">Forgot password?</Link>
-                	<Link className="SignIn__link" to="#">Sign up</Link>
+                	<Link className="SignIn__link" to="/signup">Sign up</Link>
 					<div className="SignIn__submit">
 						<Button classes={{label: "SignIn__button"}}>Login</Button>
 					</div>
