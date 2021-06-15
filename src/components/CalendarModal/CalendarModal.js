@@ -100,7 +100,10 @@ export default function CalendarModal({show,cb,date}) {
               type="submit"
               variant="contained"
               color="primary"
-              onClick={() => handleClose(2)}
+              onClick={
+                () => 
+                  handleClose(2)
+              }
             >
               CONFIRM
             </Button>
