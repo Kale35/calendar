@@ -1,0 +1,23 @@
+.reminder {
+  display: flex;
+  float: left;
+}
+
+.reminder > h2 {
+  margin-top: 5px;
+}
+
+.reminder__color {
+  color: blueviolet;
+  margin-top: 11.25px;
+  margin-right: 10px;
+}
+
+.reminder__delete {
+  color: red;
+  margin-left: 30px;
+}
+
+.reminder__delete > IconButton {
+  color: red;
+}

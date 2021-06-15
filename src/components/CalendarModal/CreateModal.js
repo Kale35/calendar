@@ -45,11 +45,70 @@ export default function CreateModal({show,cb,date}) {
         onClick={(e) => e.stopPropagation()}
       >
         <div className="calendarModal__header">
-          <h1>Create Reminders</h1>
+          <h1>NEW REMINDER</h1>
           <IconButton onClick={() => handleClose(1)}>
             <CloseIcon />
           </IconButton>
         </div>
+        <form
+          className="calendarModal__form"
+          onSubmit={(e) => {
+            e.preventDefault();
+          }}
+        >
+          <div className="calendarModal__inputDiv">
+            <TextField
+              inputRef={titleRef}
+              multiline
+              variant="outlined"
+              label="Reminder Title"
+              rowsMax={2}
+            ></TextField>
+          </div>
+          <div className="calendarModal__inputDiv">
+            <TextField
+              inputRef={descriptionRef}
+              multiline
+              label="Reminder Description"
+              variant="outlined"
+              rows={5}
+            />
+          </div>
+
+          <div className="calendarModal__inputDiv">
+            <TextField
+              inputRef={dateRef}
+              id="date"
+              type="datetime-local"
+              // defaultValue="2017-05-24T10:30"
+              defaultValue={parseDate()}
+              onChange={(e) => console.log(e.target.value)}
+              InputLabelProps={{
+                shrink: true,
+              }}
+            />
+          </div>
+          <ColorPicker
+            name="color"
+            defaultValue="#000"
+            // value={this.state.color} - for controlled component
+            onChange={(color) => console.log(color)}
+          />
+          <div className="calendarModal__buttonDiv">
+            <Button
+              className="calendarModal__button"
+              type="submit"
+              variant="contained"
+              color="primary"
+              onClick={
+                () => 
+                  handleClose(2)
+              }
+            >
+              CONFIRM
+            </Button>
+          </div>
+        </form>
       </div>
     </div>
   );

@@ -4,7 +4,8 @@ import "./CSS/CalendarPage.css"
 import IconButton from '@material-ui/core/IconButton';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
-import CalendarModal from '../components/CalendarModal/CalendarModal';
+import CreateModal from '../components/CalendarModal/CreateModal';
+import RemindersModal from '../components/CalendarModal/RemindersModal';
 export default function CalendarPage() {
 
 	const _DATE = new Date();
@@ -120,6 +121,7 @@ export default function CalendarPage() {
 
 	return (
     <div className="calendar__wrapper">
+	  <CreateModal/>
       <IconButton
         type="button"
         onClick={() => setCurrentMonth(currentMonth - 1)}
@@ -134,7 +136,9 @@ export default function CalendarPage() {
       </IconButton>
       <span style={{ color: "#eaeaea" }}>Current month {currentMonth + 1}</span>
       <div className="calendar">{showCalendarRows()}</div>
-			<CalendarModal show={showModal} cb={modalCallback}/>
+	
+	  {/*Uncomment to see Reminder Modal*/}
+	  {/*<RemindersModal show={showModal} cb={modalCallback}/>*/}
     </div>
   );
 }
