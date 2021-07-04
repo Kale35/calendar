@@ -5,6 +5,25 @@
   flex-wrap: wrap;
 }
 
+.calendar__header {
+  background-color: rgb(1, 1, 109);
+  display: flex;
+}
+
+.calendar__headercontent {
+  margin-top: 6px;
+}
+
+.calendar__headercontent > Button {
+  color: rgb(255, 81, 0);
+  text-transform: capitalize;
+  margin-left: 165vh;
+}
+
+.calendar__arrows > Button {
+  color: whitesmoke;
+}
+
 .calendar__button {
   color: whitesmoke;
 }

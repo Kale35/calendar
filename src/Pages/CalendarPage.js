@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Calendar from '../components/Calendar/Calendar';
-import "./CSS/CalendarPage.css"
+import "./CSS/CalendarPage.css";
+import {Button} from '@material-ui/core'
 import IconButton from '@material-ui/core/IconButton';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
@@ -121,20 +122,30 @@ export default function CalendarPage() {
 
 	return (
     <div className="calendar__wrapper">
-	  <CreateModal/>
-      <IconButton
-        type="button"
-        onClick={() => setCurrentMonth(currentMonth - 1)}
-      >
-        <ArrowBackIcon className="calendar__button"/>
-      </IconButton>
-      <IconButton
-        type="button"
-        onClick={() => setCurrentMonth(currentMonth + 1)}
-      >
-        <ArrowForwardIcon className="calendar__button"/>
-      </IconButton>
-      <span style={{ color: "#eaeaea" }}>Current month {currentMonth + 1}</span>
+	  <div className="calendar__header">
+		<CreateModal/>
+		<div className="calendar__arrows">
+			<IconButton
+				type="button"
+				onClick={() => setCurrentMonth(currentMonth - 1)}
+			>
+				<ArrowBackIcon className="calendar__button"/>
+			</IconButton>
+			<IconButton
+				type="button"
+				onClick={() => setCurrentMonth(currentMonth + 1)}
+			>
+				<ArrowForwardIcon className="calendar__button"/>
+			</IconButton>
+		</div>
+		<div className="calendar__headercontent">
+			<span style={{ color: "#eaeaea" }}>Current month {currentMonth + 1}</span>
+			<Button  classes={{label: "calendar__signout"}}>
+				Sign Out
+			</Button>
+		</div>
+	  </div>
+
       <div className="calendar">{showCalendarRows()}</div>
 	
 	  {/*Uncomment to see Reminder Modal*/}
